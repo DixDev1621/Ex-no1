@@ -37,15 +37,15 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 CODE SEGMENT
 ASSUME CS:CODE, DS:CODE
 ORG 1000H
+MOV SI,1200H
+MOV AX,[SI]
+MOV BX,[SI+02H]
 MOV CL,00H
-MOV AX,1234H
-MOV BX,1234H
 ADD AX,BX
 JNC L1
 INC CL
-L1:MOV SI,1200H
-MOV [SI],AX
-MOV [SI+2],CL
+L1:MOV [SI+04H],AX
+MOV [SI+06H],CL
 MOV AH,4CH
 INT 21H
 CODE ENDS
@@ -59,6 +59,9 @@ END
 |       1200🔢       01         12
 
 |         1200                    |
+
+
+<img width="641" height="437" alt="Screenshot 2026-02-04 112225" src="https://github.com/user-attachments/assets/aaa363a5-1461-4cf3-9afb-544f2ce885ac" />
 
 #### Manual Calculations
 
@@ -111,6 +114,9 @@ END
 | ----------------------- | ------------------------ |
 |                         |                          |
 
+
+<img width="638" height="429" alt="image" src="https://github.com/user-attachments/assets/5ab070c0-1e2a-426b-95dc-78d0da9b6ac3" />
+
 #### Manual Calculations
 
 (Add your calculation here)
@@ -160,6 +166,9 @@ END
 | ----------------------- | ------------------------ |
 |                         |                          |
 
+
+<img width="646" height="436" alt="image" src="https://github.com/user-attachments/assets/5db9e6ef-1446-4db5-9343-9ef92bb04c74" />
+
 #### Manual Calculations
 
 (Add your calculation here)
@@ -205,6 +214,10 @@ END
 | ----------------------- | ------------------------ |
 |                         |                          |
 
+
+
+<img width="639" height="427" alt="image" src="https://github.com/user-attachments/assets/1c739ccc-fb2e-469d-a0b9-498c5ec1d33c" />
+
 #### Manual Calculations
 
 (Add your calculation here)
@@ -217,4 +230,3 @@ END
 ## RESULT
 
 Thus, the Assembly Language Programs for 8086 to perform arithmetic operations (Addition, Subtraction, Multiplication, and Division) using both direct and indirect methods were successfully written and executed using MASM.
-
